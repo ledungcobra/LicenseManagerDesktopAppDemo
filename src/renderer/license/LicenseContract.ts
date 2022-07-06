@@ -24,6 +24,15 @@ export class LicenseContract implements ILicenseContract {
       return Promise.resolve(false);
     }
     const timeStampValid = timeExpiredMillis >= +new Date();
+    console.log(
+      '🚀 ~ file: LicenseContract.ts ~ line 27 ~ LicenseContract ~ hasValidLicense ~ Date',
+      +new Date()
+    );
+    console.log(
+      '🚀 ~ file: LicenseContract.ts ~ line 27 ~ LicenseContract ~ hasValidLicense ~ timeExpiredMillis',
+      timeExpiredMillis
+    );
+
     if (!timeStampValid) {
       console.log('Time stamp not valid');
     }
